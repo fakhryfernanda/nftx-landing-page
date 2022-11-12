@@ -766,9 +766,16 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 
 #trial .content > img {
   width: 784px;
+  /* width: 392px; */
+  /* width: calc(50%); */
+  height: 549px;
+  /* height: 481px; */
+  border-radius: 30px;
   position: absolute;
-  left: calc(50% - 12px);
+  left: calc(50%);
   top: 65px;
+  /* object-fit: cover; */
+  clip-path: inset(0 124px 48px 0 round 0 0 30px 0);
 }
 
 /* Footer */
