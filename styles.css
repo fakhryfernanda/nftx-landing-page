@@ -449,7 +449,6 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
   padding-bottom: 150px;
   background-color: #F0F9FF;
 }
-
 #pricing .card {
   background-color: #FFF;
   padding: 32px;
@@ -457,16 +456,125 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
   box-sizing: border-box;
   border: 1px solid transparent;
 }
+#pricing .card .recommended-badge {
+  display: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  align-self: flex-start;
+  position: absolute;
+  right: 0;
 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
 #pricing .card.recommended {
   background-image: url(./images/Shap.png);
   background-repeat: no-repeat;
-  /* border: 1px solid #1681FE; */
 }
-
 #pricing .card:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: scale(1.02);
+}
+#pricing .card .card-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #EAEBEC;
+}
+.container .card .trophy {
+  padding: 14px;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+#pricing .title {
+  margin-bottom: 74px;
+}
+#pricing .title h3 {
+  margin-bottom: 32px;
+}
+#pricing .text .price-tag {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 42px;
+  color: #293241;
+}
+#pricing .text p i {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #545B67;
+}
+#pricing .text .dollar-sign {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 42px;
+  color: #293241;
+}
+.container .text h6 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+#pricing .benefit-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#pricing .benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#pricing .benefit p {
+  font-family: 'Anybody';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  color: #293241;
+}
+#pricing .benefit.close p {
+  color: #A9ADB3;
+}
+#pricing .card .get-start-button {
+  margin-top: 50px;
+  padding: 14px 24px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#pricing .card#starter.recommended .recommended-badge {
+  display: block;
+  background-color: #EDCB50;
+}
+#pricing .card#business.recommended .recommended-badge {
+  display: block;
+  background-color: #1681FE;
+}
+#pricing .card#premium.recommended .recommended-badge {
+  display: block;
+  background-color: #448C74;
 }
 #pricing .card#starter:hover {
   border: 1px solid #EDCB50;
@@ -476,19 +584,6 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 }
 #pricing .card#premium:hover {
   border: 1px solid #448C74;
-}
-
-#pricing .card .card-header {
-  display: flex;
-  align-items: center;
-  padding-bottom: 32px;
-  border-bottom: 1px solid #EAEBEC;
-}
-
-.container .card .trophy {
-  padding: 14px;
-  border-radius: 12px;
-  margin-right: 12px;
 }
 
 .container .card#starter .trophy {
@@ -502,49 +597,6 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 .container .card#premium .trophy {
   background-color: #448C74;
 }
-
-#pricing .title {
-  margin-bottom: 74px;
-}
-
-#pricing .title h3 {
-  margin-bottom: 32px;
-}
-
-#pricing .text .price-tag {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 42px;
-  line-height: 42px;
-  color: #293241;
-}
-
-#pricing .text p i {
-  font-family: 'Inter';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #545B67;
-}
-
-#pricing .text .dollar-sign {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 42px;
-  color: #293241;
-}
-
-.container .text h6 {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-}
-
 .container #starter .text h6 {
   color: #EDCB50;
 }
@@ -553,46 +605,6 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 }
 .container #premium .text h6 {
   color: #448C74;
-}
-
-#pricing .benefit-container {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-#pricing .benefit {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#pricing .benefit p {
-  font-family: 'Anybody';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 17px;
-  color: #293241;
-}
-
-#pricing .benefit.close p {
-  color: #A9ADB3;
-}
-
-#pricing .card .get-start-button {
-  margin-top: 50px;
-  padding: 14px 24px;
-  text-align: center;
-  border-radius: 12px;
-  cursor: pointer;
-
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
 }
 
 #pricing .card#starter .get-start-button {
@@ -655,6 +667,7 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 }
 
 #testimonial .profile {
+  width: fit-content;
   padding-bottom: 21px;
   border-bottom: 1px solid #D4D6D9;
   margin-bottom: 24px;
@@ -781,8 +794,10 @@ body, ul, ol, h1, h2, h3, h4, h6, p {
 /* Footer */
 
 #footer {
-  margin-top: 364px;
-  padding: 24px 0;
+  margin-top: 182px;
+  padding-top: 70px;
+  padding-bottom: 24px;
+  border-top: 1px solid #EAEBEC;
 }
 
 #footer .container {
